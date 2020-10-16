@@ -25,7 +25,7 @@ app.use(express.static(publicdircpath)) //main page
 //homepage call through hbs
 app.get('/', ( req, res) => {
     res.render(viewPath +'index',{
-        title:'Home Page',
+        title:'Weather Application',
         name:'koyal das'
 
     })
@@ -37,24 +37,12 @@ app.get('/about', ( req, res) => {
     })
 })
 app.get('/help', ( req, res) => {
-    res.render(viewPath+'about',{
+    res.render(viewPath+'help',{
         title:'Help Page',
         name:'koyal das'
     })
 })
 
-
-// app.get('',(req,res) => {
-//     res.send('Hello Express!')
-// })
-
-// app.get('/help',(req,res) => {
-//     res.send('Help page.')
-// })
-// app.get('/about',(req,res) => {
-
-//     res.send('<h1>About Page.</h1>')
-// })
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({

@@ -3,11 +3,15 @@
     <head>
        <title>About Page</title>
        <link rel="stylesheet" href="/css/styles.css">
+       <link rel="icon" href="/images/weather.png">
     </head>
     <body>
-         {{>header}}
-        <h1>{{title}} Page</h1>
-        <img src="/images/robot.png">
+        <div class="main-content">
+            {{>header}}
+             <p>This site was created by Koyal das. It uses data from mapbox.com and weatherstack.com!</p>
+            <img class="portrait" src="/images/robot.png">
+        </div>
          {{>footer}}
+         
     </body>
 </html>
