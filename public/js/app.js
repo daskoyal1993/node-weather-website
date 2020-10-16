@@ -1,4 +1,4 @@
-//console.log("hello koyal")
+console.log("hello koyal")
 fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then((data) => {
         //console.log(data)
@@ -26,7 +26,7 @@ weatherdata.addEventListener('submit',(e) => {
     const location = search.value
     messageOne.textContent = 'loading...'
     messageTwo.textContent = ' '
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 messageOne.textContent = data.error
